@@ -1,7 +1,8 @@
 plugins {
-    java
-    `java-library`
-    `maven-publish`
+    id("java")
+    id("java-library")
+    id("maven-publish")
+    id("signing")
 }
 
 allprojects {
@@ -16,18 +17,4 @@ allprojects {
 subprojects {
     apply(plugin = "java")
     apply(plugin = "java-library")
-    apply(plugin = "maven-publish")
-
-    afterEvaluate {
-        publishing {
-            publications {
-                create<MavenPublication>(project.name.removePrefix("tid-")) {
-                    groupId = project.group.toString()
-                    artifactId = project.name
-                    version = project.version.toString()
-                    from(components["java"])
-                }
-            }
-        }
-    }
 }
