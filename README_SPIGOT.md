@@ -56,7 +56,7 @@ final Timeline timeline = TimelineBuilder.newBuilder()
 
 ### Example Plugin
 
-_Coming soon_
+[tid-spigot-example](https://github.com/devwckd/tid-spigot-example)
 
 ### Feature Requests
 
