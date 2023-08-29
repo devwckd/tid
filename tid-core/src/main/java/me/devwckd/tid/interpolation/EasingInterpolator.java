@@ -64,5 +64,4 @@ public interface EasingInterpolator extends Interpolator {
             return change / 2 * currentFrame * currentFrame * currentFrame + first;
         return change / 2 * ((currentFrame -= 2) * currentFrame * currentFrame + 2) + first;
     };
-
 }
