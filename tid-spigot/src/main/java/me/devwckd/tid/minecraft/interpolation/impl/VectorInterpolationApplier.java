@@ -14,9 +14,9 @@ public final class VectorInterpolationApplier implements InterpolationApplier<Ve
     @Override
     public Vector applyInterpolation(Vector first, Vector last, int frame, int duration, Interpolator easing) {
         return new Vector(
-          easing.apply(first.getX(), (last.getX() - first.getX()), frame, duration),
-          easing.apply(first.getY(), (last.getY() - first.getY()), frame, duration),
-          easing.apply(first.getZ(), (last.getZ() - first.getZ()), frame, duration)
+          easing.apply(first.getX(), last.getX(), frame, duration),
+          easing.apply(first.getY(), last.getY(), frame, duration),
+          easing.apply(first.getZ(), last.getZ(), frame, duration)
         );
     }
 

@@ -11,7 +11,7 @@ public final class LongInterpolationApplier implements InterpolationApplier<Long
 
     @Override
     public Long applyInterpolation(Long first, Long last, int frame, int duration, Interpolator interpolator) {
-        return Math.round(interpolator.apply(first.doubleValue(), (last - first), frame, duration));
+        return Math.round(interpolator.apply(first.doubleValue(), last, frame, duration));
     }
 
     @Override
