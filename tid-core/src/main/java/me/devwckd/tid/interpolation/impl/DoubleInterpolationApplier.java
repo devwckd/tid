@@ -11,7 +11,7 @@ public final class DoubleInterpolationApplier implements InterpolationApplier<Do
 
     @Override
     public Double applyInterpolation(Double first, Double last, int frame, int duration, Interpolator interpolator) {
-        return interpolator.apply(first, last - first, frame, duration);
+        return interpolator.apply(first, last, frame, duration);
     }
 
     @Override
